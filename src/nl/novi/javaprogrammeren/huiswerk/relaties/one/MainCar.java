@@ -25,5 +25,23 @@ public class MainCar {
      */
     public static void main(String[] args) {
 
+        CarDealer dealer1 = new CarDealer("DiscountCars");
+        CarOwner owner1 = new CarOwner("Tom");
+
+//        The dealer aquires two cars
+        dealer1.addCarToGarage();
+        dealer1.addCarToGarage();
+
+//        The dealer shows the cars he has
+        dealer1.listCarsInGarage();
+
+//        The dealer sells a car to the client
+        dealer1.transferCar(owner1, 1);
+
+//        The client shows his cars
+        owner1.listCarsOwned();
+
+//        The dealer shows his remaining cars
+        dealer1.listCarsInGarage();
     }
 }
