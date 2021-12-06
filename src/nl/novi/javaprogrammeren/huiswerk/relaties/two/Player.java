@@ -5,7 +5,7 @@ public class Player {
     private String name = null;
 
 
-//    Constructors
+    //    CONSTRUCTORS
     public Player() {
     }
 
@@ -23,7 +23,7 @@ public class Player {
     }
 
 
-//    Setters
+    //    SETTERS
     public void setPlayerClub(Club myClub) {
         this.myClub = myClub;
     }
@@ -32,7 +32,7 @@ public class Player {
         this.name = name;
     }
 
-    //    Getters
+    //    GETTERS
     public Club getPlayerClub() {
         return myClub;
     }

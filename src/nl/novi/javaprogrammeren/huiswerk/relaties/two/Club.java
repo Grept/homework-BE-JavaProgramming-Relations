@@ -8,17 +8,12 @@ public class Club {
     private Competition clubCompetition;
     ArrayList<Player> clubPlayerList = new ArrayList<>();
 
+//    CONSTRUCTORS
     public Club(String clubName) {
         this.clubName = clubName;
     }
 
-//    Getters
-
-    public String getClubName() {
-        return clubName;
-    }
-
-//    Setters
+//    SETTERS
     public void addNewPlayer(Player newPlayer) {
         if (clubPlayerList.size() < 25){
             System.out.println("Adding a player...");
@@ -56,6 +51,15 @@ public class Club {
         for(int i = 0; i < clubPlayerList.size(); i++){
             System.out.println((i +1) + "\t" + clubPlayerList.get(i).getName());
         }
+    }
+
+    public Competition getClubCompetition() {
+        return clubCompetition;
+    }
+
+//    GETTERS
+    public String getClubName() {
+        return clubName;
     }
 }
 

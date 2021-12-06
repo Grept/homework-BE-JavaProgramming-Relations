@@ -32,11 +32,23 @@ public class MainFootball {
         listOfClubs.add(new Club("Heracles Almelo"));
         listOfClubs.add(new Club("RKC Waalwijk"));
         listOfClubs.add(new Club("Sparta Rotterdam"));
-        listOfClubs.add(new Club("PEC Zwolle"));
+//        listOfClubs.add(new Club("PEC Zwolle"));
 //        listOfClubs.add(new Club("Fortuna Sittard"));
 
         Competition eredivisie = new Competition("Eredivisie", listOfClubs);
-        eredivisie.listClubs();
+        eredivisie.printClubsInCompetition();
+
+
+//        Testing system
+        System.out.println("\nTry to make a new club");
+        Club fcTom = new Club("FC Tom");
+        eredivisie.addClub(fcTom);
+        Player tomJansen = new Player("Tom Jansen");
+        fcTom.addNewPlayer(tomJansen);
+
+        System.out.println(tomJansen.getName() +
+                           " is in competition: " + tomJansen.getPlayerClub().getClubCompetition().getCompetitionName() +
+                           "\nHe is playing for: " + tomJansen.getPlayerClub().getClubName());
 
     }
 }
